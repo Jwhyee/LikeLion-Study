@@ -75,6 +75,9 @@
                 // V8 : 총알을 맞은 벙커의 피 깎기
                 hp = hp - 1;
                 $('#hp').text('HP : ' + hp);
+                if(hp == 0){
+                    $('#bunker').fadeOut();
+                }
             });
        })
     </script>
