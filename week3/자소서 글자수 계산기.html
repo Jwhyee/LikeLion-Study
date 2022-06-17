@@ -7,16 +7,30 @@
 </head>
 <body>
     <h1>자기소개</h1>
-    <textarea id="jasoseol">
+    <textarea id="jasoseol" rows="3">
         저는 인성 문제가 없습니다.
     </textarea>
+    <span id="count">(0/200)</span>
     <script>
-        /* HTML에 있는 값 가져오기 
+        /* V1 : HTML에 있는 값 가져오기 
         var data = document.getElementById('jasoseol').value;
         console.log(data);
         */
+       /* V2 : 문자열의 길이 계산하기
         var data = document.getElementById('jasoseol').value;
         console.log(data.length);
+       */
+      /* V3 : 화면에 글자수 띄우기 
+      var data = document.getElementById('jasoseol').value;
+      document.getElementById('count').innerHTML='(' + data.length + '/200';
+      */
+     /* V4 : 함수로 변환하기 */
+     function counter(){
+        var data = document.getElementById('jasoseol').value;
+        document.getElementById('count').innerHTML = '(' + data.length + '/200)';
+     }
+     counter();
+
     </script>
 </body>
 </html>
