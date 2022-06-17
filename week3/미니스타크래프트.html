@@ -6,9 +6,15 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <style>
+        #bullet{
+            display: none;
+        }
         #gun, #bullet, #bunker{
             width: 100px;
             height: 100px;
+        }
+        #bunker{
+
         }
     </style>
 </head>
@@ -38,7 +44,9 @@
         */
        /* V4 : 총 클릭 시 총알 나타내기 */
        $('#gun').click(function(){
-        $('#bullet').fadeIn();
+            $('#bullet').fadeIn();
+            // V5 : 총알 발사 애니메이션
+            $('#bullet').animate({left: '+=250'});
        })
     </script>
 </body>
