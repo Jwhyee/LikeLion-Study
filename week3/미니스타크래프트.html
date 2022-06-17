@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <style>
+        #gun, #bullet, #bunker{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
     <div>
         <img id="gun" src="images/gun.png">
-        <img id="gun" src="images/Bullet.png">
-        <img id="gun" src="images/bunker.jpeg">
+        <img id="bullet" src="images/Bullet.png">
+        <img id="bunker" src="images/bunker.jpeg">
     </div>
     <button id="click">버튼</button>
     <script>
@@ -30,6 +36,10 @@
             console.log("총알 발사");
         });
         */
+       /* V4 : 총 클릭 시 총알 나타내기 */
+       $('#gun').click(function(){
+        $('#bullet').fadeIn();
+       })
     </script>
 </body>
 </html>
