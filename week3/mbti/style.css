@@ -2,6 +2,6 @@ article{
     display: flex;
     flex-direction: column;
 }
-/* .question{
+.question{
     display: none;
-} */
+}
