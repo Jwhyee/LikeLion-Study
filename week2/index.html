@@ -15,6 +15,7 @@
                 lotto.push(parseInt(Math.random() * 45 + 1));
             }
         }
+        lotto.sort((a,b) => a-b);
         document.write(lotto);
     </script>
 </body>
