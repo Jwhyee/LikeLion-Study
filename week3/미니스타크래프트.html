@@ -23,8 +23,8 @@
         #bullet{
             display: none;
             position: absolute;
-            top: 140px;
-            left: 150px;
+            top: 100px;
+            left: 155px;
             width: 50px;
             height: 20px;
             z-index: 2;
@@ -37,6 +37,7 @@
     </style>
 </head>
 <body>
+    <h1 id="hp">HP : 3</h1>
     <div class="bg">
         <img id="gun" src="images/gun.png">
         <img id="bullet" src="images/Bullet.png">
@@ -44,6 +45,7 @@
     </div>
     <button id="click">버튼</button>
     <script>
+        var hp = 3;
         /* V1 : 함수 정의 및 사용
         function hello(){
             console.log("hello");
@@ -68,7 +70,10 @@
             // V6 : 총알 발사 후 총알 사라지기
             $('#bullet').fadeOut();
             // V7 : 총알이 다시 총으로 돌아오도록
-            $('#bullet').css(left:'150px');
+            $('#bullet').css({left:'150px'});
+            // V8 : 총알을 맞은 벙커의 피 깎기
+            hp = hp - 1;
+            $('#hp').text('HP : ' + hp);
        })
     </script>
 </body>
