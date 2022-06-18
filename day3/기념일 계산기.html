@@ -94,7 +94,7 @@
 
         // 만난 일 수 구하기
         var timeDiff = now.getTime() - start.getTime();
-        var day = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+        var day = Math.floor(timeDiff / (1000 * 60 * 60 * 24) + 1);
         // 1초(1000밀리초) * 60초(1분) * 60분(1시간) * 24시간(1일) + 1일(사귄 날부터 1일)
         // Math.floor -> 뒤 소수점만 버리고, 정수형으로 변환
         $('#love').text(day + '일째');
@@ -111,9 +111,11 @@
         // 1초(1000밀리초) * 60초(1분) * 60분(1시간) * 24시간(1일) + 1일(사귄 날부터 1일)
         var thousand = new Date(ms);
         var thousandDate = thousand.getFullYear() + '.' + (thousand.getMonth()+1) + '.' + thousand.getDate();
-        var timeDiff3 = thousand.getTime() - now.getTime();
-        var day3 = Math.floor(timeDiff3 / (1000 * 60 * 60 * 24));
         $('#thousand-date').text(thousandDate);
+
+        // 1000일까지 남은 날 구하기
+        var timeDiff3 = thousand.getTime() - now.getTime();
+        var day3 = Math.floor(timeDiff3 / (1000 * 60 * 60 * 24) + 1);
         $('#thousand').text(day3 + '일 남음');
     </script>
 </body>
