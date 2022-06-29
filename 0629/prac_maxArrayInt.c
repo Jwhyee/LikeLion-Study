@@ -24,6 +24,12 @@ int main(void)
     int max_number = 0;
 
     // 구현 시작
+    for (int i = 0; i < sizeof(a); i++)
+    {
+        if(max_number < a[i]){
+            max_number = a[i];
+        }
+    }
 
     // 구현 끝
 
