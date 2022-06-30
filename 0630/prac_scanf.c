@@ -5,12 +5,9 @@
 int main(void)
 {
     int input;
-    // 메모리에 input에 대한 공간을 만들어준다.
 
     printf("정수를 입력해주세요. :");
     scanf("%d", &input);
-    // 만들어준 공간에 입력한 수를 넣어준다.
-    
 
     printf("입력하신 수는 %d 입니다.", input);
 
